@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { useTypedSelector } from '../hooks/useTypedSelector';
 import { useActions } from '../hooks/useActions';
+// import { actionCreators } from '../state';
 
 const RepositoriesList: React.FC = () => {
   const [term, setTerm] = useState('');
@@ -10,6 +11,7 @@ const RepositoriesList: React.FC = () => {
   const onSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
 
+    //dispatch(actionCreators.searchRepositories(term));
     searchRepositories(term);
   };
 
